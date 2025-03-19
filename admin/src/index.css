@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+    themes: night --default, cmyk --prefersdark;
+}
+
+/* Barcha browserlar uchun scrollbar width 1px */
+::-webkit-scrollbar {
+    width: 1px;
+    /* Vertikal scrollbar */
+    height: 5%;
+    /* Gorizontal scrollbar */
+
+}
+
+/* Scrollbar tugmalarini yashirish */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Scrollbar track (fondi) */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: rgba(75, 75, 75, 0.2);
+    border-radius: 100px !important;
+}
+
+/* Firefox uchun */
+* {
+    scrollbar-width: thin;
+    /* "auto" o‘rniga "thin" ishlatamiz */
+    scrollbar-color: var(--color-primary) transparent;
+}
