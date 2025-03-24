@@ -42,12 +42,13 @@ const Dashboard = () => {
   const totalOrders = data.find(item => item.title === "Total orders").number / 100 || 0;
   const totalPull = totalOrders * totalCanceled;
   const cancelPercentage = 100 - totalPull;
+  
 
 
   return (
     <ContainerTemplate>
       <div>
-        <div className="flex justify-between items-center my-5">
+        <div className="flex justify-between items-center">
           <Title title="Dashborad" description="Hi, Abdulaziz. Welcome back to Sedap Admin!" />
           <FilterData />
         </div>
@@ -59,7 +60,7 @@ const Dashboard = () => {
               <div className="skeleton flex-1 min-h-44 border border-primary shadow-xl"></div>
               <div className="skeleton flex-1 min-h-44 border border-primary shadow-xl"></div>
             </>
-          ) : data.length ? (
+             ) : data.length ? (
             data.map((item, id) => (
               <div
                 key={id}
@@ -83,8 +84,8 @@ const Dashboard = () => {
           )}
         </div>
 
-        <div className="mt-5">
-          <div className="bg-base-100 p-5">
+        <div className="mt-5 ">
+          <div className="bg-base-100 p-5 rounded-xl shadow-xl">
             <div className="flex justify-between">
               <h1>Pie Chart</h1>
               <div className="flex items-center">
